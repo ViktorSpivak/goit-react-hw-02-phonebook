@@ -1,0 +1,1 @@
+{"version":3,"sources":["contactform.module.css"],"names":[],"mappings":"AAAA,kCACE,WAAY,CACZ,qBACF,CACA,+BACE,aAAc,CACd,WACF,CACA,OACE,gBACF","file":"main.0bf037c4.chunk.css","sourcesContent":[".phonebookForm {\r\n  width: 300px;\r\n  border: solid 2px black;\r\n}\r\n.labelStyle {\r\n  display: block;\r\n  margin: 20px;\r\n}\r\nbutton {\r\n  margin: 10px 20px;\r\n}\r\n"]}

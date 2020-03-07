@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
 import style from "./contactform.module.css";
 import { v4 as uuidv4 } from "uuid";
-export class Input extends Component {
+export class ContactForm extends Component {
   state = {
     name: "",
     number: ""
@@ -62,5 +63,8 @@ export class Input extends Component {
     );
   }
 }
-
-export default Input;
+ContactForm.protoTypes = {
+  onFindOverlap: PropTypes.func.isRequired,
+  onCheckIn: PropTypes.func.isRequired
+};
+export default ContactForm;

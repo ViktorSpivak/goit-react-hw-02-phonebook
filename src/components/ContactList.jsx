@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const ContactList = ({ onShowFindRes, onDelete }) => {
   return (
     onShowFindRes.length !== 0 && (
@@ -20,5 +20,9 @@ const ContactList = ({ onShowFindRes, onDelete }) => {
 };
 ContactList.defaultProps = {
   onShowFindRes: []
+};
+ContactList.protoTypes = {
+  onShowFindRes: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired
 };
 export default ContactList;

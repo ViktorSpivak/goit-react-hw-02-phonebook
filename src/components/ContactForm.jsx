@@ -21,45 +21,43 @@ export class ContactForm extends Component {
       this.setState({
         name: ""
       });
-    } else {
-      const newContact = { id: uuidv4(), name, number };
-      this.props.onCheckIn(newContact);
-      this.setState({
-        name: "",
-        number: ""
-      });
+      return;
     }
+    const newContact = { id: uuidv4(), name, number };
+    this.props.onCheckIn(newContact);
+    this.setState({
+      name: "",
+      number: ""
+    });
   };
   render() {
     const { name, number } = this.state;
     return (
-      <Fragment>
-        <form onSubmit={this.handleSubmit} className={style.phonebookForm}>
-          <label htmlFor={this.nameFormId} className={style.labelStyle}>
-            Name
-            <br />
-            <input
-              type="text"
-              value={name}
-              onChange={this.handleChange}
-              name="name"
-              id={this.nameFormId}
-            />
-          </label>
-          <label htmlFor={this.numberFormId} className={style.labelStyle}>
-            Number
-            <br />
-            <input
-              type="text"
-              value={number}
-              onChange={this.handleChange}
-              name="number"
-              id={this.numberFormId}
-            />
-          </label>
-          <button type="submit">Add contact</button>
-        </form>
-      </Fragment>
+      <form onSubmit={this.handleSubmit} className={style.phonebookForm}>
+        <label htmlFor={this.nameFormId} className={style.labelStyle}>
+          Name
+          <br />
+          <input
+            type="text"
+            value={name}
+            onChange={this.handleChange}
+            name="name"
+            id={this.nameFormId}
+          />
+        </label>
+        <label htmlFor={this.numberFormId} className={style.labelStyle}>
+          Number
+          <br />
+          <input
+            type="text"
+            value={number}
+            onChange={this.handleChange}
+            name="number"
+            id={this.numberFormId}
+          />
+        </label>
+        <button type="submit">Add contact</button>
+      </form>
     );
   }
 }
